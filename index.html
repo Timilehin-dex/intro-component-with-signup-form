@@ -243,6 +243,7 @@
           error.classList.remove("hidden");
           input.classList.add("border-red-700", "focus:border-red-700");
           icon.classList.remove("hidden");
+          input.placeholder = "";
         } else {
           error.classList.add("hidden");
           input.classList.remove("border-red-700", "focus:border-red-700");
@@ -259,8 +260,13 @@
 
         if (!input.validity.valid) {
           error.classList.remove("hidden");
-          input.classList.add("border-red-700", "focus:border-red-700");
+          input.classList.add(
+            "border-red-700",
+            "focus:border-red-700",
+            "placeholder:text-red-400"
+          );
           icon.classList.remove("hidden");
+          input.placeholder = "email@example/com";
         } else {
           error.classList.add("hidden");
           input.classList.remove("border-red-700", "focus:border-red-700");
@@ -279,6 +285,7 @@
           error.classList.remove("hidden");
           input.classList.add("border-red-700", "focus:border-red-700");
           icon.classList.remove("hidden");
+          input.placeholder = "";
         } else {
           error.classList.add("hidden");
           input.classList.remove("border-red-700", "focus:border-red-700");
